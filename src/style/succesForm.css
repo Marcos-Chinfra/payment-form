@@ -1,0 +1,19 @@
+.succes_container{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.succes_container svg{
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+.succes_container h1{
+    text-transform: uppercase;
+    margin: 0;
+}
+.succes_container p{
+    color: var(--Dark-grayish-violet);
+    margin: 0 0 25px;
+}

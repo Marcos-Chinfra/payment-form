@@ -1,0 +1,150 @@
+section{
+  position: relative;
+  width: 92vw;
+  height: 238px;
+  margin: 20px auto;
+
+}
+.back{
+  width: 79%;
+  height: 63%;
+  max-width: 447px;
+  max-height: 245px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  background-image: url(../../public/images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.back p{
+  width: 30px;
+  height: 20px;
+  margin-right: 35px;
+  font-size: 11px;
+  color: var(--White);
+}
+.front{
+  width: 79%;
+  height: 63%;
+  max-width: 447px;
+  max-height: 245px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 5px;
+  background-image: url(../../public/images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.icon_container{
+  width: 85%;
+  height: 40%;
+  margin: 0 auto;
+}
+.icon_container svg{
+  width: 27%;
+  max-width: 90px;
+  height: 100%;
+}
+.text-container{
+  width: 85%;
+  height: 50%;
+  margin: 0 auto 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.text-container .number{
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--White);
+}
+.text-container--data{
+  color: var(--White);
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+}
+.text-container--data .name{
+  margin: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.text-container--data div{
+  display: flex;
+}
+.text-container--data div p{
+  margin: 0;
+  font-size: 11px;
+}
+
+/* FORMULARIO */
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  gap: 12px;
+}
+form label{
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+form input{
+  font-size: 14px;
+  padding: 13px;
+  border-radius: 10px;
+  font-weight:500;
+  border: solid 1px var(--Light-grayish-violet);
+}
+form p{
+  margin: 0;
+}
+.input_container{
+  display: flex;
+  align-items: center;
+
+}
+.input_container--date {
+  width: 50%;
+}
+.input_container--date input{
+  width: 25%;
+  margin-right: 5px;
+}
+.input_container--cvc{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.input_container--cvc input{
+  width: 83%;
+}
+
+input[type = "submit"]{
+  width: 90vw ;
+  height: 50px;
+  padding: 13px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight:500;
+  border-radius: 10px;
+  border: solid 1px var(--Light-grayish-violet);
+  color: var(--White);
+  background-color: var(--Very-dark-violet);
+}
+input[type = "submit"]:hover{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6) ;
+}
