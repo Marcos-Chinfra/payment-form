@@ -80,19 +80,24 @@ function App() {
   function submitValidation(e){
     e.preventDefault();
     if(!name){
-      console.log("name is false")
+      const input = document.querySelector(".inputName")
+      input.classList.add("error") 
     }
     if(!number){
-      console.log("number is false")
+      const input = document.querySelector(".inputNumber")
+      input.classList.add("error") 
     }
     if(!month){
-      console.log("month is false")
+      const input = document.querySelector(".inputMonth")
+      input.classList.add("error") 
     }
     if(!year){
-      console.log("year is false")
+      const input = document.querySelector(".inputYear")
+      input.classList.add("error") 
     }
     if(!cvc){
-      console.log("cvc is false")
+      const input = document.querySelector(".inputCvc")
+      input.classList.add("error") 
     }
     if(name && number && month && year && cvc){
       setLoading(true)
@@ -127,25 +132,25 @@ function App() {
       <main>
         {loading ? <SuccesForm/> : <form >
           <label>CARDHOLDER NAME</label>
-          <input placeholder="e.g. Richard Tapia" type="text" value={name}  ref={focus} onChange={(e) =>{ setName(e.target.value)}}/>
+          <input placeholder="e.g. Richard Tapia" className="inputName" type="text" value={name}  ref={focus} onChange={(e) =>{ setName(e.target.value)}} />
 
           <label>CARD NUMBER</label>
-          <input placeholder="e.g. 1234 5678 9123 0000" type="text" value={number} onKeyDown={handleNumber}/>
+          <input placeholder="e.g. 1234 5678 9123 0000" type="text" className="inputNumber" value={number} onKeyDown={handleNumber}/>
           <p ></p>
 
           <div className="input_container">
             <div className="input_container--date">
             <label>EXP. DATE</label>
               <div>
-              <input placeholder="MM" type="text" value={month} onKeyDown={handleMonth}/>
-              <input placeholder="YY" type="text" value={year} onKeyDown={handleYear }/>
+              <input placeholder="MM" type="text" className="inputMonth" value={month} onKeyDown={handleMonth}/>
+              <input placeholder="YY" type="text" className="inputYear" value={year} onKeyDown={handleYear }/>
               <p></p>
               </div>
             </div>
 
             <div className="input_container--cvc">
               <label>CVC</label>
-              <input placeholder="e.g. 123" type="text" value={cvc} onKeyDown={handleCvc}/>
+              <input placeholder="e.g. 123" type="text" className="inputCvc" value={cvc} onKeyDown={handleCvc}/>
               <p ></p>
             </div>
           </div>

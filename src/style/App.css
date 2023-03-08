@@ -1,6 +1,15 @@
+:root{
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --Red: hsl(0, 100%, 66%);
+  --Linear-gradient:hsl(278, 94%, 30%);
+}
 section{
   position: relative;
   width: 92vw;
+  max-width: 500px;
   height: 238px;
   margin: 20px auto;
 
@@ -9,7 +18,7 @@ section{
   width: 79%;
   height: 63%;
   max-width: 447px;
-  max-height: 245px;
+  max-height: 235px;
   position: absolute;
   top: 0;
   right: 0;
@@ -33,7 +42,7 @@ section{
   width: 79%;
   height: 63%;
   max-width: 447px;
-  max-height: 245px;
+  max-height: 235px;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -72,6 +81,7 @@ section{
   color: var(--White);
 }
 .text-container--data{
+  max-width: 300px;
   color: var(--White);
   display: flex;
   justify-content: space-between;
@@ -91,11 +101,15 @@ section{
 }
 
 /* FORMULARIO */
-
+main{
+  width: 90vw;
+  max-width: 500px;
+  height: 300px;
+}
 form{
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 100%;
   gap: 12px;
 }
 form label{
@@ -103,19 +117,29 @@ form label{
   letter-spacing: 1px;
 }
 form input{
+  width: 100%;
+  max-width: 392px;
   font-size: 14px;
   padding: 13px;
   border-radius: 10px;
   font-weight:500;
   border: solid 1px var(--Light-grayish-violet);
 }
+form input:focus {
+  outline: 2px solid var(--Linear-gradient);
+}
+.error{
+  border: solid 2px var(--Red);
+}
+
 form p{
   margin: 0;
+  color: var(--Red);
 }
 .input_container{
   display: flex;
   align-items: center;
-
+  max-width: 425px;
 }
 .input_container--date {
   width: 50%;
@@ -134,7 +158,8 @@ form p{
 }
 
 input[type = "submit"]{
-  width: 90vw ;
+  width: 90vw;
+  max-width: 420px;
   height: 50px;
   padding: 13px;
   margin-top: 10px;
@@ -147,4 +172,44 @@ input[type = "submit"]{
 }
 input[type = "submit"]:hover{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6) ;
+}
+
+/*MEDIA QUERYS*/
+
+@media (min-width:600px){
+  section{
+    height: 490px;
+    margin: 0;
+  }
+  .back,
+  .front{
+    height: 235px;
+  }
+  .back{
+    top: auto;
+    bottom: 0;
+  }
+  .back p{
+    font-size: 15px;
+  }
+  .front{
+    top: 0;
+  }
+  .text-container .number{
+    font-size: 22px;
+    letter-spacing: 3.5px;
+  }
+  .text-container--data .name{
+    font-size: 13px;
+  }
+  .text-container--data div p{
+    font-size: 13px;
+  }
+  main{
+    width: 60vw;
+  }
+  form{
+    width: 90%;
+    margin-bottom: 25px;
+  }
 }

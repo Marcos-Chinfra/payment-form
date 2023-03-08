@@ -1,5 +1,6 @@
 .succes_container{
     width: 90vw;
+    max-width: 420px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,4 +17,8 @@
 .succes_container p{
     color: var(--Dark-grayish-violet);
     margin: 0 0 25px;
+}
+
+@media (min-width:600px){
+
 }
